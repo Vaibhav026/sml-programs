@@ -15,7 +15,7 @@ fun tour(i,j,L,x,n,con) =
 
 	if(n=64) then 
 	L
-	else if(i-2>=1 and j-1>=1 and !present((i-2,j-1),L) and ( (x<1 and con) or !con ) ) then
+	else if(i-2>=1 and j-1>=1 and !present((i-2,j-1),L) and ( (x<1 and con)  !con ) ) then
 	tour(i-2,j-1,(i,j)::L,1,n+1,false)	
 	else if(i-2>=1 and j+1<=8 and !present((i-2,j+1),L) and ( (x<2 and con) or !con ) ) then
 	tour(i-2,j+1,(i,j)::L,2,n+1,false)
